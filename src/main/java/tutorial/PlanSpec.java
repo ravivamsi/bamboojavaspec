@@ -35,7 +35,12 @@ public class PlanSpec {
                     .jobs(new Job("Default Job",
                             new BambooKey("JOB1"))
                             .tasks(new ScriptTask()
-                                    .inlineBody("#!/bin/sh\n\necho \"Simple Test\""))))
+                                    .inlineBody("#!/bin/sh\n\necho \"Simple Test\""),
+                                    
+                                    new ScriptTask()
+                                    .inlineBody("#!/bin/sh\n\necho \"Simple Addition\"")
+                            		
+                            		)))
             .linkedRepositories("Bamboo Spec Repository")
             
             .triggers(new RepositoryPollingTrigger())
